@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
 import spotifyLogo from "../logo/Spotify_Logo.png";
 import { FaHome, FaBookOpen } from "react-icons/fa";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getQueryAction, resetSearchAction } from "../redux/actions";
 
 const Sidebar = () => {
+  const [query, setQuery] = useState("");
+  const dispatch = useDispatch();
+
+  const search = (e) => {
+    e.preventDefault();
+    dispatch(getQueryAction(query));
+    setQuery("");
+  };
   return (
     <nav className="navbar navbar-expand-md navbar-white bg-navbar fixed-left justify-content-between" id="sidebar">
       <div className="nav-container">
@@ -30,13 +41,13 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li>
-                <Link className="nav-item nav-link" to="/">
+                <Link className="nav-item nav-link" to="/" onClick={() => dispatch(resetSearchAction())}>
                   <FaBookOpen className="fs-4" />
                   &nbsp; Your Library
                 </Link>
               </li>
               <li>
-                <div className="input-group mt-3">
+                <div className="input-group mt-3" onSubmit={search}>
                   <input
                     type="text"
                     className="form-control mb-2"
@@ -44,6 +55,8 @@ const Sidebar = () => {
                     placeholder="Search"
                     aria-label="Search"
                     aria-describedby="basic-addon2"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
                   />
                   <div className="input-group-append" style={{ marginBottom: "4%" }}>
                     <button className="btn btn-outline-secondary" type="button" id="button-addon1">
