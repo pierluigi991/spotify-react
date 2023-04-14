@@ -1,8 +1,20 @@
+import { Col, Container, Row } from "react-bootstrap";
+import Sidebar from "./Sidebar";
+import MyPlayer from "./MyPlayer";
+import ContentAlbum from "./ContentAlbum"
+
 const Album = () => {
   return (
-    <div>
-      <h1>Album</h1>
-    </div>
+    <Container fluid>
+      <Row>
+        <Col xs={2}>
+          <Sidebar />
+        </Col>
+        <Col xs={12} md={9} className="offset-md-3 mainPage">
+          <ContentAlbum/>
+      </Row>
+      <MyPlayer />
+    </Container>
   );
 };
 
