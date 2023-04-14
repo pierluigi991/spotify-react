@@ -1,7 +1,7 @@
-mport { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import Sidebar from "./Sidebar";
 import MyPlayer from "./MyPlayer";
-import ContentArtist from "./ContentArtist"
+import ContentArtist from "./ContentArtist";
 
 const Artist = () => {
   return (
@@ -11,7 +11,7 @@ const Artist = () => {
           <Sidebar />
         </Col>
         <Col xs={12} md={9} className="offset-md-3 mainPage">
-          <ContentArtist/>
+          <ContentArtist />
         </Col>
       </Row>
       <MyPlayer />

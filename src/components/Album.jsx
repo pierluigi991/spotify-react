@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Sidebar from "./Sidebar";
 import MyPlayer from "./MyPlayer";
-import ContentAlbum from "./ContentAlbum"
+import ContentAlbum from "./ContentAlbum";
 
 const Album = () => {
   return (
@@ -11,7 +11,8 @@ const Album = () => {
           <Sidebar />
         </Col>
         <Col xs={12} md={9} className="offset-md-3 mainPage">
-          <ContentAlbum/>
+          <ContentAlbum />
+        </Col>
       </Row>
       <MyPlayer />
     </Container>
