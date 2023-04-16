@@ -6,11 +6,6 @@ import MyPlayer from "./MyPlayer";
 const ContentArtist = () => {
   return (
     <>
-      <Row>
-        <Col xs={2}>
-          <MyNav />
-        </Col>
-      </Row>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 col-md-9 offset-md-3 mainPage">
