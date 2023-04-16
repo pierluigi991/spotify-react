@@ -1,4 +1,4 @@
-import { Button, Row, Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 import { Link } from "react-router-dom";
 import MyPlayer from "./MyPlayer";
@@ -21,7 +21,6 @@ const ContentArtist = () => {
 
             <div className="row">
               <div className="col-12 col-md-10 col-lg-10 mt-5">
-                <h2 className="titleMain"></h2>
                 <div id="followers"></div>
                 <div className="d-flex justify-content-center" id="button-container">
                   <Button className="btn-success mr-2 mainButton d-none" id="playButton">
